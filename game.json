@@ -188,6 +188,10 @@
         {
           "name": "WeaponSpawnedFlag",
           "value": ""
+        },
+        {
+          "name": "PlayerSpeed",
+          "value": "2.5"
         }
       ],
       "instances": [
@@ -269,20 +273,7 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [
-            {
-              "acceleration": 400,
-              "allowDiagonals": true,
-              "angleOffset": 0,
-              "angularMaxSpeed": 420,
-              "deceleration": 800,
-              "ignoreDefaultControls": true,
-              "maxSpeed": 200,
-              "name": "TopDownMovement",
-              "rotateObject": true,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
               "name": "",
@@ -321,20 +312,7 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "behaviors": [
-            {
-              "acceleration": 400,
-              "allowDiagonals": true,
-              "angleOffset": 0,
-              "angularMaxSpeed": 420,
-              "deceleration": 800,
-              "ignoreDefaultControls": true,
-              "maxSpeed": 200,
-              "name": "TopDownMovement",
-              "rotateObject": true,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-            }
-          ],
+          "behaviors": [],
           "animations": [
             {
               "name": "",
@@ -766,86 +744,126 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                    "value": "ChangeDirection"
                   },
                   "parameters": [
                     "Player1",
-                    "TopDownMovement"
+                    "=",
+                    "270"
                   ],
                   "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Gamepads::C_Axis_pushed"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"LEFT\"",
-                    "\"RIGHT\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                    "value": "MettreY"
                   },
                   "parameters": [
                     "Player1",
-                    "TopDownMovement"
+                    "-",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"UP\") * Variable(PlayerSpeed)"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "Gamepads::C_Axis_pushed"
-                  },
-                  "parameters": [
-                    "",
-                    "1",
-                    "\"LEFT\"",
-                    "\"LEFT\"",
-                    ""
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"LEFT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "=",
+                        "270 - (90 * Gamepads::AxisValue(1, \"LEFT\", \"LEFT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "-",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"LEFT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateLeftKey"
-                  },
-                  "parameters": [
-                    "Player1",
-                    "TopDownMovement"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"RIGHT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "=",
+                        "270 + (90 * Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "+",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "disabled": false,
@@ -871,11 +889,291 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                    "value": "ChangeDirection"
                   },
                   "parameters": [
                     "Player1",
-                    "TopDownMovement"
+                    "=",
+                    "90"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "+",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"DOWN\") * Variable(PlayerSpeed)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"LEFT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "=",
+                        "90 + (90 * Gamepads::AxisValue(1, \"LEFT\", \"LEFT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "-",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"LEFT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"RIGHT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "=",
+                        "90 - (90 * Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player1",
+                        "+",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"LEFT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"UP\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"DOWN\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeDirection"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "=",
+                    "180"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "-",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"LEFT\") * Variable(PlayerSpeed)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"RIGHT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"UP\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "1",
+                        "\"LEFT\"",
+                        "\"DOWN\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeDirection"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "+",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\") * Variable(PlayerSpeed)"
                   ],
                   "subInstructions": []
                 }
@@ -1020,86 +1318,126 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateUpKey"
+                    "value": "ChangeDirection"
                   },
                   "parameters": [
                     "Player2",
-                    "TopDownMovement"
+                    "=",
+                    "270"
                   ],
                   "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+                },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Gamepads::C_Axis_pushed"
-                  },
-                  "parameters": [
-                    "",
-                    "2",
-                    "\"LEFT\"",
-                    "\"RIGHT\"",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateRightKey"
+                    "value": "MettreY"
                   },
                   "parameters": [
                     "Player2",
-                    "TopDownMovement"
+                    "-",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"UP\") * Variable(PlayerSpeed)"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "Gamepads::C_Axis_pushed"
-                  },
-                  "parameters": [
-                    "",
-                    "2",
-                    "\"LEFT\"",
-                    "\"LEFT\"",
-                    ""
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"LEFT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "=",
+                        "270 - (90 * Gamepads::AxisValue(1, \"LEFT\", \"LEFT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "-",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"LEFT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateLeftKey"
-                  },
-                  "parameters": [
-                    "Player2",
-                    "TopDownMovement"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"RIGHT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "=",
+                        "270 + (90 * Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "+",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "disabled": false,
@@ -1125,11 +1463,291 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TopDownMovementBehavior::SimulateDownKey"
+                    "value": "ChangeDirection"
                   },
                   "parameters": [
                     "Player2",
-                    "TopDownMovement"
+                    "=",
+                    "90"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "+",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"DOWN\") * Variable(PlayerSpeed)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"LEFT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "=",
+                        "90 + (90 * Gamepads::AxisValue(1, \"LEFT\", \"LEFT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "-",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"LEFT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"RIGHT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeDirection"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "=",
+                        "90 - (90 * Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\"))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "Player2",
+                        "+",
+                        "Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\") * Variable(PlayerSpeed)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"LEFT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"UP\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"DOWN\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeDirection"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "=",
+                    "180"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "-",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"LEFT\") * Variable(PlayerSpeed)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::And"
+                  },
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"RIGHT\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"UP\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Gamepads::C_Axis_pushed"
+                      },
+                      "parameters": [
+                        "",
+                        "2",
+                        "\"LEFT\"",
+                        "\"DOWN\"",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeDirection"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "+",
+                    "Gamepads::AxisValue(1, \"LEFT\", \"RIGHT\") * Variable(PlayerSpeed)"
                   ],
                   "subInstructions": []
                 }
@@ -1244,12 +1862,7 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": [
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-        }
-      ]
+      "behaviorsSharedData": []
     }
   ],
   "externalEvents": [],
