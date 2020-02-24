@@ -154,15 +154,6 @@
         "name": "Jam5 Images\\Background2.jpg",
         "smoothed": true,
         "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Jam5 Images/Bullet.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Jam5 Images\\Bullet.png",
-        "smoothed": true,
-        "userAdded": true
       }
     ],
     "resourceFolders": []
