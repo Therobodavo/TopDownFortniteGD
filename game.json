@@ -390,6 +390,21 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "DebugText",
+          "width": 0,
+          "x": 1,
+          "y": 470,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1987,7 +2002,7 @@
                   "parameters": [
                     "DebugText",
                     "=",
-                    "\"Bang\""
+                    "\"(\" +ToString(Player1.X())+\",\"+ToString(Player1.Y()) +\")\" + \"(\" + ToString(Player1.X()+10*cos(Player1.Angle()))+\" , \" +ToString(Player1.Y()+10*sin(Player1.Angle())) + \")\""
                   ],
                   "subInstructions": []
                 },
@@ -1999,8 +2014,8 @@
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player1.X()",
-                    "Player1.Y()",
+                    "Player1.X()+(35*cos(Player1.Angle()))",
+                    "Player1.Y()+(35*sin(Player1.Angle()))",
                     "2"
                   ],
                   "subInstructions": []
@@ -2141,7 +2156,7 @@
                   "parameters": [
                     "DebugText",
                     "=",
-                    "\"Bang\""
+                    "\"(\" +ToString(Player1.X())+\",\"+ToString(Player1.Y()) +\")\" + \"(\" + ToString(Player1.X()+10*cos(Player1.Angle()))+\" , \" +ToString(Player1.Y()+10*sin(Player1.Angle())) + \")\""
                   ],
                   "subInstructions": []
                 },
@@ -2153,8 +2168,8 @@
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player1.X()",
-                    "Player1.Y()",
+                    "Player1.X()+(35*cos(Player1.Angle()))",
+                    "Player1.Y()+(35*sin(Player1.Angle()))",
                     "2"
                   ],
                   "subInstructions": []
@@ -2250,7 +2265,7 @@
                   "parameters": [
                     "DebugText",
                     "=",
-                    "\"Bang\""
+                    "\"(\" +ToString(Player1.X())+\",\"+ToString(Player1.Y()) +\")\" + \"(\" + ToString(Player1.X()+10*cos(Player1.Angle()))+\" , \" +ToString(Player1.Y()+10*sin(Player1.Angle())) + \")\""
                   ],
                   "subInstructions": []
                 }
@@ -3061,8 +3076,8 @@
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player2.X()",
-                    "Player2.Y()",
+                    "Player2.X()+(35*cos(Player2.Angle()))",
+                    "Player2.Y()+(35*sin(Player2.Angle()))",
                     "2"
                   ],
                   "subInstructions": []
@@ -3203,8 +3218,8 @@
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player2.X()",
-                    "Player2.Y()",
+                    "Player2.X()+(35*sin(Player2.Angle()))",
+                    "Player2.Y()+(35*sin(Player2.Angle()))",
                     "2"
                   ],
                   "subInstructions": []
@@ -3549,17 +3564,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Bullet",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
@@ -3605,17 +3609,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Bullet",
-                    ""
-                  ],
-                  "subInstructions": []
-                },
                 {
                   "type": {
                     "inverted": false,
