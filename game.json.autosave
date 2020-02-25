@@ -446,8 +446,8 @@
                       "centerPoint": {
                         "automatic": true,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 15.0454,
+                        "y": 16
                       },
                       "customCollisionMask": []
                     }
@@ -475,8 +475,8 @@
                       "centerPoint": {
                         "automatic": true,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 15.0454,
+                        "y": 16
                       },
                       "customCollisionMask": []
                     }
@@ -504,8 +504,8 @@
                       "centerPoint": {
                         "automatic": true,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 15.0454,
+                        "y": 16
                       },
                       "customCollisionMask": []
                     }
@@ -902,6 +902,14 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": ""
+              },
+              "parameters": [],
+              "subInstructions": []
             }
           ],
           "actions": [
@@ -1111,6 +1119,61 @@
                 "TextReset",
                 "=",
                 "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Gamepads::C_Any_Button_pressed"
+                  },
+                  "parameters": [
+                    "",
+                    "3",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Gamepads::C_Any_Button_pressed"
+                  },
+                  "parameters": [
+                    "",
+                    "4",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "TextObject::String"
+              },
+              "parameters": [
+                "DebugText",
+                "=",
+                "\"Pressed\""
               ],
               "subInstructions": []
             }
@@ -1997,25 +2060,13 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "DebugText",
-                    "=",
-                    "\"(\" +ToString(Player1.X())+\",\"+ToString(Player1.Y()) +\")\" + \"(\" + ToString(Player1.X()+10*cos(Player1.Angle()))+\" , \" +ToString(Player1.Y()+10*sin(Player1.Angle())) + \")\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Create"
                   },
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player1.X()+(35*cos(Player1.Angle()))",
-                    "Player1.Y()+(35*sin(Player1.Angle()))",
+                    "Player1.X()+(35*cos(ToRad(Player1.Angle())))",
+                    "Player1.Y()+(35*sin(ToRad(Player1.Angle())))",
                     "2"
                   ],
                   "subInstructions": []
@@ -2040,7 +2091,7 @@
                   "parameters": [
                     "Bullet",
                     "Player1.Angle()",
-                    "250",
+                    "350",
                     "1"
                   ],
                   "subInstructions": []
@@ -2151,25 +2202,13 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "DebugText",
-                    "=",
-                    "\"(\" +ToString(Player1.X())+\",\"+ToString(Player1.Y()) +\")\" + \"(\" + ToString(Player1.X()+10*cos(Player1.Angle()))+\" , \" +ToString(Player1.Y()+10*sin(Player1.Angle())) + \")\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Create"
                   },
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player1.X()+(35*cos(Player1.Angle()))",
-                    "Player1.Y()+(35*sin(Player1.Angle()))",
+                    "Player1.X()+(35*cos(ToRad(Player1.Angle())))",
+                    "Player1.Y()+(35*sin(ToRad(Player1.Angle())))",
                     "2"
                   ],
                   "subInstructions": []
@@ -2194,7 +2233,7 @@
                   "parameters": [
                     "Bullet",
                     "Player1.Angle()",
-                    "250",
+                    "350",
                     "1"
                   ],
                   "subInstructions": []
@@ -2256,20 +2295,7 @@
                   "subInstructions": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "DebugText",
-                    "=",
-                    "\"(\" +ToString(Player1.X())+\",\"+ToString(Player1.Y()) +\")\" + \"(\" + ToString(Player1.X()+10*cos(Player1.Angle()))+\" , \" +ToString(Player1.Y()+10*sin(Player1.Angle())) + \")\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": []
             },
             {
@@ -3059,25 +3085,13 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "DebugText",
-                    "=",
-                    "\"Bang\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Create"
                   },
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player2.X()+(35*cos(Player2.Angle()))",
-                    "Player2.Y()+(35*sin(Player2.Angle()))",
+                    "Player2.X()+(35*cos(ToRad(Player2.Angle())))",
+                    "Player2.Y()+(35*sin(ToRad(Player2.Angle())))",
                     "2"
                   ],
                   "subInstructions": []
@@ -3201,25 +3215,13 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "DebugText",
-                    "=",
-                    "\"Bang\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Create"
                   },
                   "parameters": [
                     "",
                     "Bullet",
-                    "Player2.X()+(35*sin(Player2.Angle()))",
-                    "Player2.Y()+(35*sin(Player2.Angle()))",
+                    "Player2.X()+(35*cos(ToRad(Player2.Angle())))",
+                    "Player2.Y()+(35*sin(ToRad(Player2.Angle())))",
                     "2"
                   ],
                   "subInstructions": []
@@ -3564,6 +3566,17 @@
                 {
                   "type": {
                     "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
                     "value": "ModVarScene"
                   },
                   "parameters": [
@@ -3630,6 +3643,17 @@
                     "TextReset",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
                   ],
                   "subInstructions": []
                 }
