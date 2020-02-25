@@ -280,6 +280,15 @@
         "name": "Jam5 Images\\UI\\HealthIcon.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Jam5 Images/UI/AmmoIcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Jam5 Images\\UI\\AmmoIcon.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -312,7 +321,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.88
+        "zoomFactor": 0.85
       },
       "objectsGroups": [],
       "variables": [
@@ -443,7 +452,7 @@
           "locked": false,
           "name": "Player1Health",
           "width": 0,
-          "x": 4,
+          "x": 25,
           "y": 3,
           "zOrder": 4,
           "numberProperties": [],
@@ -456,10 +465,10 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "Player1Ammo",
+          "name": "Player1AmmoCount",
           "width": 0,
-          "x": 4,
-          "y": 30,
+          "x": 40,
+          "y": 32,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -486,10 +495,10 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "Player2Ammo",
+          "name": "Player2AmmoCount",
           "width": 0,
-          "x": 639,
-          "y": 30,
+          "x": 644,
+          "y": 32,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -503,8 +512,8 @@
           "locked": false,
           "name": "WoodIcon",
           "width": 0,
-          "x": 4,
-          "y": 55,
+          "x": 61,
+          "y": 28,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -518,8 +527,8 @@
           "locked": false,
           "name": "IronIcon",
           "width": 0,
-          "x": 74,
-          "y": 55,
+          "x": 122,
+          "y": 28,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -533,8 +542,8 @@
           "locked": false,
           "name": "WoodCountPlayer1",
           "width": 0,
-          "x": 39,
-          "y": 61,
+          "x": 96,
+          "y": 32,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -548,8 +557,8 @@
           "locked": false,
           "name": "IronCountPlayer1",
           "width": 0,
-          "x": 105,
-          "y": 59,
+          "x": 157,
+          "y": 32,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -557,14 +566,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 30,
           "layer": "",
           "locked": false,
           "name": "WoodIcon",
-          "width": 0,
-          "x": 630,
-          "y": 57,
+          "width": 32,
+          "x": 673,
+          "y": 28,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -578,8 +587,8 @@
           "locked": false,
           "name": "IronIcon",
           "width": 0,
-          "x": 708,
-          "y": 58,
+          "x": 730,
+          "y": 28,
           "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
@@ -593,8 +602,8 @@
           "locked": false,
           "name": "WoodCountPlayer2",
           "width": 0,
-          "x": 664,
-          "y": 62,
+          "x": 708,
+          "y": 32,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
@@ -608,8 +617,8 @@
           "locked": false,
           "name": "IronCountPlayer2",
           "width": 0,
-          "x": 741,
-          "y": 63,
+          "x": 765,
+          "y": 32,
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
@@ -626,6 +635,36 @@
           "x": 203,
           "y": 270,
           "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "AmmoIcon",
+          "width": 0,
+          "x": 5,
+          "y": 28,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "AmmoIcon",
+          "width": 0,
+          "x": 609,
+          "y": 28,
+          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1095,19 +1134,19 @@
         {
           "bold": false,
           "italic": false,
-          "name": "Player1Ammo",
+          "name": "Player1AmmoCount",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "P1 Ammo :",
+          "string": "0",
           "font": "",
           "characterSize": 20,
           "color": {
-            "b": 0,
-            "g": 0,
+            "b": 255,
+            "g": 255,
             "r": 255
           }
         },
@@ -1133,20 +1172,20 @@
         {
           "bold": false,
           "italic": false,
-          "name": "Player2Ammo",
+          "name": "Player2AmmoCount",
           "smoothed": true,
           "tags": "",
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "behaviors": [],
-          "string": "P2 Ammo :",
+          "string": "0",
           "font": "",
           "characterSize": 20,
           "color": {
             "b": 255,
-            "g": 33,
-            "r": 0
+            "g": 255,
+            "r": 255
           }
         },
         {
@@ -1555,6 +1594,45 @@
             "g": 0,
             "r": 255
           }
+        },
+        {
+          "name": "AmmoIcon",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Jam5 Images\\UI\\AmmoIcon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -2106,9 +2184,9 @@
                 "value": "TextObject::String"
               },
               "parameters": [
-                "Player1Ammo",
+                "Player1AmmoCount",
                 "=",
-                "\"P1 Ammo : \" + ToString(Variable(Player1Ammo))"
+                "ToString(Variable(Player1Ammo))"
               ],
               "subInstructions": []
             },
@@ -2118,9 +2196,9 @@
                 "value": "TextObject::String"
               },
               "parameters": [
-                "Player2Ammo",
+                "Player2AmmoCount",
                 "=",
-                "\"P2 Ammo : \" + ToString(Variable(Player2Ammo))"
+                "ToString(Variable(Player2Ammo))"
               ],
               "subInstructions": []
             },
@@ -7032,7 +7110,7 @@
                   },
                   "parameters": [
                     "Bullet",
-                    "Player1",
+                    "Player2",
                     "",
                     "",
                     ""
@@ -7058,7 +7136,7 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "Player1Health",
+                    "Player2Health",
                     "-",
                     "1"
                   ],
