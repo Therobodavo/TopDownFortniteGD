@@ -14,7 +14,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "I:\\Documents\\TopDownFortniteGD\\game.json",
+    "projectFile": "C:\\Users\\Zak\\Documents\\GitHub\\Jam5\\TopDownFortniteGD\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -7317,7 +7317,7 @@
                   "parameters": [
                     "Player1Health",
                     "-",
-                    "1"
+                    "2"
                   ],
                   "subInstructions": []
                 },
@@ -7376,7 +7376,7 @@
                   "parameters": [
                     "Player2Health",
                     "-",
-                    "1"
+                    "2"
                   ],
                   "subInstructions": []
                 },
