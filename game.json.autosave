@@ -307,6 +307,13 @@
         "name": "Jam5 Images\\IronTile.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "file": "Jam5 Audio/bgm.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Jam5 Audio\\bgm.wav",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -339,7 +346,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.928
+        "zoomFactor": 1.168
       },
       "objectsGroups": [],
       "variables": [
@@ -425,8 +432,8 @@
           "locked": false,
           "name": "Player1",
           "width": 0,
-          "x": 195,
-          "y": 162,
+          "x": 97,
+          "y": 303,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -440,8 +447,8 @@
           "locked": false,
           "name": "Player2",
           "width": 0,
-          "x": 424,
-          "y": 310,
+          "x": 691,
+          "y": 313,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -695,8 +702,8 @@
           "locked": false,
           "name": "WoodTile",
           "width": 0,
-          "x": 306,
-          "y": 352,
+          "x": 589,
+          "y": 194,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -710,8 +717,8 @@
           "locked": false,
           "name": "WoodTile",
           "width": 0,
-          "x": 306,
-          "y": 320,
+          "x": 589,
+          "y": 162,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -725,8 +732,8 @@
           "locked": false,
           "name": "WoodTile",
           "width": 0,
-          "x": 306,
-          "y": 288,
+          "x": 589,
+          "y": 130,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -740,8 +747,8 @@
           "locked": false,
           "name": "IronTile",
           "width": 0,
-          "x": 306,
-          "y": 256,
+          "x": 374,
+          "y": 249,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -755,8 +762,8 @@
           "locked": false,
           "name": "IronTile",
           "width": 0,
-          "x": 306,
-          "y": 224,
+          "x": 374,
+          "y": 281,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -770,8 +777,8 @@
           "locked": false,
           "name": "IronTile",
           "width": 0,
-          "x": 306,
-          "y": 192,
+          "x": 374,
+          "y": 313,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -785,8 +792,8 @@
           "locked": false,
           "name": "IronTile",
           "width": 0,
-          "x": 306,
-          "y": 192,
+          "x": 406,
+          "y": 249,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -800,8 +807,608 @@
           "locked": false,
           "name": "IronTile",
           "width": 0,
-          "x": 306,
-          "y": 192,
+          "x": 406,
+          "y": 281,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "IronTile",
+          "width": 0,
+          "x": 406,
+          "y": 313,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "IronTile",
+          "width": 0,
+          "x": 438,
+          "y": 313,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "IronTile",
+          "width": 0,
+          "x": 438,
+          "y": 281,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "IronTile",
+          "width": 0,
+          "x": 438,
+          "y": 249,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 226,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 258,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 290,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 322,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 354,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 386,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 418,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 450,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 589,
+          "y": 482,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 127,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 159,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 191,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 223,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 255,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 287,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 319,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 351,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 383,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 415,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 447,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 218.425,
+          "y": 479,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": -139.452,
+          "y": 116.726,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": -139.452,
+          "y": 148.726,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": -139.452,
+          "y": 180.726,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": -139.452,
+          "y": 212.726,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": -139.452,
+          "y": 244.726,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 409,
+          "y": 438,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 409,
+          "y": 470,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 409,
+          "y": 502,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 409,
+          "y": 534,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 409,
+          "y": 566,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 405.568,
+          "y": 129,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 405.568,
+          "y": 97,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 405.568,
+          "y": 65,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 405.568,
+          "y": 33,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "WoodTile",
+          "width": 0,
+          "x": 405.568,
+          "y": 1,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -2133,6 +2740,20 @@
                 "Player2TurretHealth",
                 "=",
                 "5"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Jam5 Audio\\bgm.wav",
+                "yes",
+                "10\n",
+                ""
               ],
               "subInstructions": []
             }
@@ -4142,6 +4763,78 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "IronTile",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "IronTile",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "WoodTile",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Player1",
+                    "WoodTile",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -6008,6 +6701,78 @@
             {
               "disabled": false,
               "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "IronTile",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "IronTile",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "WoodTile",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Player2",
+                    "WoodTile",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -7317,7 +8082,7 @@
                   "parameters": [
                     "Player1Health",
                     "-",
-                    "2"
+                    "1"
                   ],
                   "subInstructions": []
                 },
@@ -7376,7 +8141,7 @@
                   "parameters": [
                     "Player2Health",
                     "-",
-                    "2"
+                    "1"
                   ],
                   "subInstructions": []
                 },
@@ -7458,76 +8223,6 @@
                   },
                   "parameters": [
                     "Bullet",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TowerBullet",
-                    "WoodTile",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "TowerBullet",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "TowerBullet",
-                    "IronTile",
-                    "",
-                    "",
-                    ""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "TowerBullet",
                     ""
                   ],
                   "subInstructions": []
@@ -7639,6 +8334,76 @@
                   ],
                   "subInstructions": []
                 },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "TowerBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "TowerBullet",
+                    "IronTile",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "TowerBullet",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "TowerBullet",
+                    "WoodTile",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
