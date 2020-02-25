@@ -321,7 +321,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.85
+        "zoomFactor": 0.88
       },
       "objectsGroups": [],
       "variables": [
@@ -7184,7 +7184,7 @@
                     "value": "ModVarScene"
                   },
                   "parameters": [
-                    "Player2Health",
+                    "Player1Health",
                     "-",
                     "2"
                   ],
